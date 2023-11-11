@@ -22,6 +22,7 @@ module.exports = {
         news4: "url('/news4.jpeg')",
         news5: "url('/news5.jpeg')",
         news6: "url('/news6.jpeg')",
+        contact: "url('/contact.jpeg')",
       },
       backgroundPosition: {
         "right-10": "64% center",
