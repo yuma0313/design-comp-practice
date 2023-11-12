@@ -14,36 +14,44 @@ const Header = () => {
   return (
     <>
       <div className="w-full fixed top-0 left-0 flex justify-center z-20">
-        <div className="w-[328px] md:w-[1280px] h-16 md:h-20 mx-5 my-4 md:mt-8 px-4 py-3 md:px-10 flex justify-between items-center bg-white rounded-2xl relative ">
-          <div className="w-12 h-12 flex justify-center items-center">
-            <Image src={logo} alt="logo" width={48} height={46.5} />
-          </div>
-          <div className="hidden md:flex items-center justify-center">
-            <nav className="flex items-center gap-6">
-              <div className="text-neutral-800 text-base font-bold font-['Noto Sans JP'] leading-normal tracking-wide">
-                サービス
-              </div>
-              <div className="text-neutral-800 text-base font-bold font-['Noto Sans JP'] leading-normal tracking-wide">
-                企業情報
-              </div>
-              <div className="text-neutral-800 text-base font-bold font-['Noto Sans JP'] leading-normal tracking-wide">
-                採用情報
-              </div>
-              <div className="text-neutral-800 text-base font-bold font-['Noto Sans JP'] leading-normal tracking-wide">
-                お知らせ
-              </div>
+        <div className="w-[328px] md:w-[1280px] h-16 md:h-20 mt-4 md:mt-8 px-4 py-3 md:px-10 flex justify-between items-center bg-white rounded-2xl relative ">
+          <h1 className="w-12 h-12 flex justify-center items-center">
+            <a>
+              <Image
+                src={logo}
+                alt="logo"
+                className="w-10 h-10 md:w-12 md:h-[46.5px]"
+              />
+            </a>
+          </h1>
+          <div className="hidden md:flex items-center justify-center gap-10">
+            <nav>
+              <ul className="flex items-center gap-6">
+                <li className="text-neutral-800 text-base font-bold font-['Noto Sans JP'] leading-normal tracking-wide">
+                  <a>サービス</a>
+                </li>
+                <li className="text-neutral-800 text-base font-bold font-['Noto Sans JP'] leading-normal tracking-wide">
+                  <a>企業情報</a>
+                </li>
+                <li className="text-neutral-800 text-base font-bold font-['Noto Sans JP'] leading-normal tracking-wide">
+                  <a>採用情報</a>
+                </li>
+                <li className="text-neutral-800 text-base font-bold font-['Noto Sans JP'] leading-normal tracking-wide">
+                  <a>お知らせ</a>
+                </li>
+              </ul>
             </nav>
-            <div className="w-auto items-center justify-center gap-4 flex ml-10">
-              <div className="h-[45px] px-6 py-3 bg-lime-300 rounded-full justify-center items-center flex">
-                <div className="grow shrink basis-0 text-center text-neutral-800 text-sm font-bold font-['Noto Sans JP'] leading-[21px] tracking-wide">
+            <div className="w-auto items-center justify-center gap-4 flex">
+              <a className="h-[45px] px-6 py-3 bg-lime-300 rounded-full justify-center items-center flex">
+                <span className="text-center text-neutral-800 text-sm font-bold font-['Noto Sans JP'] leading-[21px] tracking-wide">
                   お問い合わせ
-                </div>
-              </div>
-              <div className="h-[45px] px-6 py-3 bg-white rounded-full border border-neutral-800 justify-center items-center flex">
-                <div className="grow shrink basis-0 text-center text-neutral-800 text-sm font-bold font-['Noto Sans JP'] leading-[21px] tracking-wide">
+                </span>
+              </a>
+              <a className="h-[45px] px-6 py-3 bg-white rounded-full border border-neutral-800 justify-center items-center flex">
+                <span className="text-center text-neutral-800 text-sm font-bold font-['Noto Sans JP'] leading-[21px] tracking-wide">
                   資料ダウンロード
-                </div>
-              </div>
+                </span>
+              </a>
             </div>
           </div>
           <div className="md:hidden flex items-center justify-center">
@@ -63,57 +71,49 @@ const Header = () => {
             <div className="relative flex-1 flex flex-col w-full h-full bg-neutral-800">
               <div className="flex-1 h-0 overflow-y-auto px-8 py-6">
                 <div className="flex items-center justify-between">
-                  <Image src={logo} alt="logo" width={48} height={46.5} />
+                  <h1>
+                    <a>
+                      <Image src={logo} alt="logo" className="w-10 h-10" />
+                    </a>
+                  </h1>
                   <button onClick={() => setIsMenuOpen(false)}>
                     <XMarkIcon className="w-10 h-10 text-white" />
                   </button>
                 </div>
-                <nav className="mt-10 flex-col justify-center items-start gap-6 flex">
+                <nav className="pt-10 flex flex-col justify-center items-start gap-10">
                   <ul className="space-y-6">
                     <li>
-                      <a
-                        href="#"
-                        className="text-white text-base font-bold font-['Noto Sans JP'] leading-normal tracking-wide"
-                      >
+                      <a className="text-white text-base font-bold font-['Noto Sans JP'] leading-normal tracking-wide">
                         サービス
                       </a>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        className="text-white text-base font-bold font-['Noto Sans JP'] leading-normal tracking-wide"
-                      >
+                      <a className="text-white text-base font-bold font-['Noto Sans JP'] leading-normal tracking-wide">
                         企業情報
                       </a>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        className="text-white text-base font-bold font-['Noto Sans JP'] leading-normal tracking-wide"
-                      >
+                      <a className="text-white text-base font-bold font-['Noto Sans JP'] leading-normal tracking-wide">
                         採用情報
                       </a>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        className="text-white text-base font-bold font-['Noto Sans JP'] leading-normal tracking-wide"
-                      >
+                      <a className="text-white text-base font-bold font-['Noto Sans JP'] leading-normal tracking-wide">
                         お知らせ
                       </a>
                     </li>
                   </ul>
-                  <div className="w-full mt-10 flex-col justify-center items-start gap-2 flex">
-                    <div className="w-full px-6 py-3 bg-lime-300 rounded-full justify-center items-center inline-flex">
-                      <div className="grow shrink basis-0 text-center text-neutral-800 text-sm font-bold font-['Noto Sans JP'] leading-[21px] tracking-wide">
+                  <div className="w-full flex flex-col justify-center items-start gap-2">
+                    <a className="w-full px-6 py-3 bg-lime-300 rounded-full flex justify-center items-center">
+                      <span className="text-center text-neutral-800 text-sm font-bold font-['Noto Sans JP'] leading-[21px] tracking-wide">
                         お問い合わせ
-                      </div>
-                    </div>
-                    <div className="w-full px-6 py-3 bg-white rounded-full border border-neutral-800 justify-center items-center inline-flex">
-                      <div className="grow shrink basis-0 text-center text-neutral-800 text-sm font-bold font-['Noto Sans JP'] leading-[21px] tracking-wide">
+                      </span>
+                    </a>
+                    <a className="w-full px-6 py-3 bg-white rounded-full border border-neutral-800 flex justify-center items-center">
+                      <span className="text-center text-neutral-800 text-sm font-bold font-['Noto Sans JP'] leading-[21px] tracking-wide">
                         資料ダウンロード
-                      </div>
-                    </div>
+                      </span>
+                    </a>
                   </div>
                 </nav>
               </div>
